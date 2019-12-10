@@ -21,7 +21,7 @@
 \includegraphics[width=4cm]{tumso2018_rasterized.png}
 \end{minipage} 
 \begin{minipage}{0.7\textwidth}
-\textbf{การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนครั้งที่ 17: TUMSO 17\textsuperscript{th}}\\[2mm]
+\textbf{การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนครั้งที่ 18: TUMSO 18\textsuperscript{th}}\\[2mm]
 วิชาคอมพิวเตอร์ \hspace{1cm} เวลา \tumsoTime \\[2mm]
 รอบที่ \tumsoRound
 \end{minipage}
@@ -79,6 +79,35 @@
 \newcommand{\InputFileName}{ข้อมูลนำเข้า}
 \newcommand{\OutputFileName}{ข้อมูลส่งออก}
 \newcommand{\Note}{\section*{คำอธิบาย}}
+
+\lstnewenvironment{codecpp}{
+  \lstset{tabsize=4,
+          aboveskip=15pt,
+          breaklines=true,
+          mathescape=true,
+          basicstyle=\ttfamily,
+          keywordstyle=\color{blue}\ttfamily,
+          stringstyle=\color{red}\ttfamily,
+          commentstyle=\color{gray}\ttfamily,
+          morecomment=[l][\color{magenta}]{\#},
+          frame=single}
+}{}
+
+\lstnewenvironment{codetumso}[1][]{
+  \lstset{tabsize=4,
+          aboveskip=15pt,
+          belowskip=0pt,
+          breaklines=true,
+          mathescape=true,
+          basicstyle=\ttfamily,
+          keywordstyle=\color{blue}\ttfamily,
+          alsoletter={\#},
+          morekeywords={TRUE,FALSE,CALL,FUNCTION,LET,IN,IF,THEN,ELSE,PLUS,MINUS,IS\_EQUAL},
+          emph={\#},
+          emphstyle={\color{magenta}\ttfamily},
+          #1}
+}{}
+
 % Copied from https://github.com/GassaFM/olymp.sty/blob/master/statements/olymp.sty
 
 \newlength{\thelinewidth}
